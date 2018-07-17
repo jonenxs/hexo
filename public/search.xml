@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[VIM编辑器实用命令]]></title>
+    <url>%2F2018%2F05%2F07%2FVIM%E7%BC%96%E8%BE%91%E5%99%A8%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[1. 移动光标 键 光标动作 hjkl，方向键 移动一位，hjkl代表左、下、上、右 ^ 移至本行第一个非空字符，匹配开头 $ 移至本行结尾，可以包含空格 w 移至下一单词或标点的开头 W 移至下一单词开头，忽略标点 b 移至上一单词或标点开头 B 移至上一单词开头，忽略标点 Ctrl-f/PgDn 下翻一页 ctrl-b/PgUp 上翻一页 nG 移至第n行 G 移至光标最后一行 :n enter键 移至第n行 n+ 向下跳n行 n- 向上跳n行 H 移至当前屏幕的第一行 L 移至当前屏幕的最后一行 注意许多vi的命令前面都可以缀上数字，前缀数字可以控制该命令执行的次数，比如5j可以使得光标向下移动5行。 2. 基本编辑 键 光标动作 a 在当前字符后插入文本 A 在行尾插入文本 i 在当前字符前插入文本 I 在行首插入文本 o 当前行下方插入新行并进入插入模式 O 当前行上方插入新行并进入插入模式 3. 删除和撤销 键 光标动作 x 删除当前字符（剪切） nx 向后删除当前行在内的n个字符（剪切） dd 删除（剪切）当前行 ndd 向下删除当前行在内的n行（剪切） dW 删除当前字符到下一单词的起始处（删除整个单词） d$ 删除当前字符到当前行的末尾（剪切） d0 删除当前字符到当前行的起始处（剪切） d^ 删除当前字符当当前行下一个非空字符（剪切） dG 删除当前行到文件末尾（剪切） d20G 删除当前行到文件第20行（d与定位符结合使用，x不行）（剪切） u 撤销上一次操作 nu 撤销n次操作 U 撤销对当前行的所有操作 4. 剪切、复制和粘贴 键 光标动作 yy 复制当前行 5yy 向下复制当前行在内的5行 yw 当前字符到下一单词的起始处 y$ 当前字符到当前行的末尾 y^ 当前字符到当前行下一个非空字符 y0 当前字符到当前行的行首 yG 当前行到文件末尾 y20G 当前行到文件第20行（用法和d完全一样，d实际就是剪切） p 粘贴到当前字符（行）后面（下方） P 粘贴到当前字符（行）前面（上方） J 合并当前行和下一行为一行 R 替换模式，和windows下的insert模式差不多 v 进入选择模式（VISUAL），可以利用方向键选择字符，然后x、d剪切或者y复制 x和d键实质上是剪切键，两者功能略有差异。y是复制键，p是粘贴键。 5. 查找和替换 键 光标动作 fx（当前行内查找） 光标移至本行下一处出现字符x的位置，输入分号重复上一次搜索 /（搜索单词或短语） 使用/命令后，屏幕底端会出现/，接下来输入要搜索的单词或短语，enter结束 :s/old/new 用new替换行中首次出现的old（:分号用于启动一条ex命令） :s/old/new/g 用new替换行中所有的old :n,m s/old/new/g 用new替换从n到m行里所有的old :%s/old/new/g 用new替换当前文件里所有的old :set nu 显示行号 :set nonu 取消显示行号 6. 保存工作 键 光标动作 :w 仅保存文件 :q 退出文件，没有修改 :q! 放弃修改并退出文件 :wq 保存并退出文件 :w file1 文件另存为file1 ZZ 保存并退出文件]]></content>
+      <tags>
+        <tag>VIM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Idea 常用的快捷键]]></title>
+    <url>%2F2018%2F05%2F03%2FIdea-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[一、Editor Basic1. Ctrl + W，Ctrl + Shift+ W Ctrl + W 选择代码块，Ctrl + Shift+ W反向选择代码块。 2. Alt + Shift + 向上箭头，Alt + Shift + 向下箭头 与 Ctrl + Shift + 向上箭头，Ctrl + Shift+ 向下箭头 Alt + Shift + 向上箭头，Alt + Shift + 向下箭头 快速移动代码行,Ctrl + Shift + 向上箭头，Ctrl + Shift+ 向下箭头快速移动代码块 3. Alt + J，Alt + Shift + J，Ctrl + Alt + Shift + J Alt + J选择相同的单词，连续按继续选择，达到多选，Alt + Shift + J减少选择的单词，Ctrl + Alt + Shift + J选择本文中全部相同的。 二、Navigation1. F4 跳转到局部变量或对象声明的地方，按住Ctrl键，鼠标左键点击有同样效果。 2 . Ctrl + B与Ctrl + Alt + B Ctrl + B 跳转到继承类（Class）或实现接口（interface）定义的地方，与其对应的可以使用Ctrl + Alt + B列出该接口类（Class）或接口（interface）有哪些继承或实现的类或接口。 三、Code Assistance1. Ctrl + P 在调用方法括号内可以查看参数列表 2. Ctrl + Q 与 Ctrl + Shift + I 在某方法上（调用处）使用Ctrl + Q 可以查看方法文档（java doc），使用Ctrl + Shift + I快速查看方法体及实现。 3. F2 使用F2可以快速定位到下一个错误处，使用Ctrl + F1查看错误提示。 4. Ctrl + Alt + T 对于一段代码块进行包围（Surround With）操作，如异常处理，条件判断等等。 四、Refactorings1. Ctrl + Alt + V 快速定义变量，在语句结尾处使用Alt + Enter 可以实现同样效果 2. Ctrl + Alt + M 快速抽离方法，重构的好帮手！！！ 3. Ctrl + Alt + C 快速定义常量，重构的好帮手！！！]]></content>
+      <tags>
+        <tag>idea 快捷键</tag>
+      </tags>
+  </entry>
+</search>
